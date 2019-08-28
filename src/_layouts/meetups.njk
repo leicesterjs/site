@@ -1,0 +1,21 @@
+---
+layout: layout.njk
+---
+
+<h1>{{ title }}</h1>
+
+<h2>Talks</h2>
+
+<ul>
+  {%- for talk in talks %}
+  <li>{{ talk.title }} - {{ talk.speaker }}</li>
+  {% endfor -%}
+</ul>
+
+<h2>When</h2>
+
+<p>{{ occurred_at }}</p>
+
+<h2>Where</h2>
+
+<p>{{ location }}</p>

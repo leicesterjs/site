@@ -1,0 +1,11 @@
+---
+layout: layout.njk
+---
+
+<h1>Meetups</h1>
+
+<ul>
+  {%- for meetup in collections.meetups | reverse -%}
+  <li><a href={{ meetup.url }}>{{ meetup.data.title }}</a></li>
+  {%- endfor -%}
+</ul>
