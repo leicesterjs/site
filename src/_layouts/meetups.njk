@@ -4,6 +4,7 @@ layout: layout.njk
 
 <h1>{{ title }}</h1>
 
+{%- if talks.length %}
 <h2>Talks</h2>
 
 <ul>
@@ -11,6 +12,7 @@ layout: layout.njk
   <li>{{ talk.title }} - {{ talk.speaker }}</li>
   {% endfor -%}
 </ul>
+{% endif -%}
 
 <h2>When</h2>
 
