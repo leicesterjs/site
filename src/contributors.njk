@@ -1,0 +1,15 @@
+---json
+{
+  "layout": "layout"
+}
+---
+
+<h1>Contributors</h1>
+
+<div class="contributors">
+{% for contributor in github.contributors %}
+  <a href={{ contributor.url }}>
+    <img alt="Profile picture for {{ contributor.login }}" class="thumbnail" src="{{ contributor.avatar_url }}" />
+  </a>
+{% endfor %}
+</div>

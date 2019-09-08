@@ -4,15 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "eleventy",
     "dev": "eleventy --serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.9.0"
-  },
   "dependencies": {
-    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0"
+    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
+    "flat-cache": "^2.0.1",
+    "node-fetch": "^2.6.0"
   }
 }

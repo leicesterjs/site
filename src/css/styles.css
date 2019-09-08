@@ -41,3 +41,19 @@ h2 {
   margin: 0 auto 2rem;
   max-width: 100%;
 }
+
+.contributors {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+}
+
+.thumbnail {
+  border-radius: 0.25rem;
+  transition: transform 0.1s ease-in-out;
+  width: 100%;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
