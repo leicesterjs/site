@@ -1,10 +1,14 @@
 const fs = require("fs");
+const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 
 module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
+
+  // Plugins
+  eleventyConfig.addPlugin(inclusiveLangPlugin);
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
