@@ -8,7 +8,7 @@
 
 <div class="contributors">
 {% for contributor in github.contributors %}
-  <a href={{ contributor.url }}>
+  <a href={{ contributor.html_url }}>
     <img alt="Profile picture for {{ contributor.login }}" class="thumbnail" src="{{ contributor.avatar_url }}" />
   </a>
 {% endfor %}
