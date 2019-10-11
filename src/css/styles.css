@@ -26,6 +26,10 @@ a:hover {
   color: white;
 }
 
+img {
+  display: block;
+}
+
 h1,
 h2 {
   color: var(--brand-orange);
