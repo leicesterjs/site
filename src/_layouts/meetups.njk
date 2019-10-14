@@ -16,7 +16,7 @@ layout: layout.njk
 
 <h2>When</h2>
 
-<p>{{ occurred_at }}</p>
+<p>{% readableDuration started_at, ended_at %}</p>
 
 <h2>Where</h2>
 

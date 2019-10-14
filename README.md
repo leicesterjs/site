@@ -7,6 +7,7 @@
 </div>
 
 ## 👩‍💻 Getting Started
+
 First clone the project
 
 `$ git clone https://github.com/leicesterjs/site leicesterjs-site`
@@ -17,8 +18,9 @@ Next install the dependencies and run the project.
 When you make changes to the code, the blog will automatically update via BrowserSync.
 
 ## 👥 Creating a new Meetup
+
 To create a new meetup based on the official meetup contained on https://meetup.com/leicesterjs, first create a dated markdown file in `/src/meetups`
-The format of the date should be `yyyy-mm-dd`
+The format of the date should be in [ISO_8601](https://en.wikipedia.org/wiki/ISO_8601) which looks like this `yyyy-mm-dd hh:mm:ss`. Note: you will need to account for whether or not the meetup is taking place during BST and alter the date format to be in UTC without the timezone offset e.g. `2019-08-15 19:00:00+01:00` would become `2019-08-15 18:00:00`.
 
 Inside this file create a template similar to the below
 
@@ -26,7 +28,8 @@ Inside this file create a template similar to the below
 ---
 layout: meetups
 location: CloudCall, 1 Colton Square, LE1 1QH, Leicester
-occurred_at: Thursday July 18th 2019, 19:00 to 21:00
+started_at: 2019-08-15 18:00:00
+ended_at: 2019-08-15 19:30:00
 tags: meetups
 talks:
   - speaker: Joshua Graham,
@@ -44,9 +47,9 @@ The end part is the Id you need.
 After you have written the article, submit a new [Pull Request](https://github.com/osdc/blog/pull/new/master).
 
 ## Technologies
-* Built using Eleventy (11ty)
-* Hosted on Netlify
 
+- Built using Eleventy (11ty)
+- Hosted on Netlify
 
 <div align="center">
 	<br>
