@@ -10,10 +10,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^0.9.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
     "flat-cache": "^2.0.1",
+    "moment-timezone": "^0.5.26",
     "node-fetch": "^2.6.0"
   }
 }

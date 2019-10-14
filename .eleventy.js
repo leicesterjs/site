@@ -1,5 +1,6 @@
 const fs = require("fs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
+const moment = require("moment-timezone");
 
 module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src/css");
@@ -7,6 +8,21 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   eleventyConfig.addPassthroughCopy("src/_redirects");
+
+  // Shortcodes
+  eleventyConfig.addShortcode("readableDuration", (startedAt, endedAt) => {
+    const formattedStart = moment
+      .utc(startedAt)
+      .tz("Europe/London")
+      .format("dddd MMMM M YYYY, HH:mm");
+
+    const formattedEnd = moment
+      .utc(endedAt)
+      .tz("Europe/London")
+      .format("HH:mm");
+
+    return `${formattedStart} to ${formattedEnd}`;
+  });
 
   // Plugins
   eleventyConfig.addPlugin(inclusiveLangPlugin);
