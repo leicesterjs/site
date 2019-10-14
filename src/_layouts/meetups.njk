@@ -22,6 +22,8 @@ layout: layout.njk
 
 <a href="https://www.google.com/maps/search/?api=1&query={{ location | urlencode }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>
 
-<h2>RSVP</h2>
+{% isFuture started_at %}
+  <h2>RSVP</h2>
 
-<a href="https://www.meetup.com/leicesterjs/events/{{ meetup_id }}/">RSVP here!</a>
+  <a href="https://www.meetup.com/leicesterjs/events/{{ meetup_id }}/">RSVP here!</a>
+{% endisFuture %}

@@ -24,6 +24,10 @@ module.exports = eleventyConfig => {
     return `${formattedStart} to ${formattedEnd}`;
   });
 
+  eleventyConfig.addPairedShortcode("isFuture", (content, startedAt) => {
+    return moment.utc(startedAt).isAfter(moment.utc()) ? content : "";
+  });
+
   // Plugins
   eleventyConfig.addPlugin(inclusiveLangPlugin);
 
