@@ -8,6 +8,7 @@ module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
   eleventyConfig.addPassthroughCopy("src/_redirects");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Shortcodes
   eleventyConfig.addShortcode("readableDuration", (startedAt, endedAt) => {
