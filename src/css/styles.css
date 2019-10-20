@@ -23,7 +23,7 @@ a:visited {
 }
 
 a:hover {
-  color: white;
+  color: var(--brand-orange);
 }
 
 img {
