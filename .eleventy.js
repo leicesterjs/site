@@ -3,7 +3,7 @@ const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const moment = require("moment-timezone");
 
 module.exports = eleventyConfig => {
-  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/css/*.min.css");
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/favicon.ico");
