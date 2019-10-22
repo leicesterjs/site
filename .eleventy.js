@@ -1,3 +1,4 @@
+const CleanCSS = require("clean-css");
 const fs = require("fs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const moment = require("moment-timezone");
@@ -27,6 +28,10 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPairedShortcode("isFuture", (content, startedAt) => {
     return moment.utc(startedAt).isAfter(moment.utc()) ? content : "";
+  });
+
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   // Plugins
