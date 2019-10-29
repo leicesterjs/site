@@ -1,6 +1,7 @@
 const fs = require("fs");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const moment = require("moment-timezone");
+const htmlmin = require("html-minifier");
 
 module.exports = eleventyConfig => {
   eleventyConfig.addPassthroughCopy("src/css");
@@ -27,6 +28,18 @@ module.exports = eleventyConfig => {
 
   eleventyConfig.addPairedShortcode("isFuture", (content, startedAt) => {
     return moment.utc(startedAt).isAfter(moment.utc()) ? content : "";
+  });
+
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if (!outputPath.includes(".html")) {
+      return content;
+    }
+
+    return htmlmin.minify(content, {
+      useShortDoctype: true,
+      removeComments: true,
+      collapseWhitespace: true
+    });
   });
 
   // Plugins
