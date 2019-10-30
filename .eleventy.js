@@ -30,9 +30,9 @@ module.exports = eleventyConfig => {
     return moment.utc(startedAt).isAfter(moment.utc()) ? content : "";
   });
 
-  eleventyConfig.addFilter("cssmin", function(code) {
-    return new CleanCSS({}).minify(code).styles;
-  });
+  eleventyConfig.addFilter("cssmin", (code) => 
+    new CleanCSS({}).minify(code).styles
+  );
 
   // Plugins
   eleventyConfig.addPlugin(inclusiveLangPlugin);
