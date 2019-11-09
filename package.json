@@ -16,5 +16,8 @@
     "flat-cache": "^2.0.1",
     "moment-timezone": "^0.5.26",
     "node-fetch": "^2.6.0"
+  },
+  "dependencies": {
+    "nunjucks": "^3.2.0"
   }
 }
