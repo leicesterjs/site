@@ -16,7 +16,7 @@ module.exports = eleventyConfig => {
     const formattedStart = moment
       .utc(startedAt)
       .tz("Europe/London")
-      .format("dddd MMMM M YYYY, HH:mm");
+      .format("dddd Do MMMM YYYY, HH:mm");
 
     const formattedEnd = moment
       .utc(endedAt)
