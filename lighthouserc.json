@@ -1,0 +1,28 @@
+{
+  "ci": {
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "installable-manifest": "off",
+        "offline-start-url": "off",
+        "service-worker": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "warn",
+        "uses-optimized-images": "warn",
+        "uses-responsive-images": "warn",
+        "works-offline": "off",
+
+        "redirects-http": "off",
+        "uses-http2": "off",
+        "uses-webp-images": "off"
+      }
+    },
+    "collect": {
+      "numberOfRuns": 1,
+      "staticDistDir": "_site"
+    },
+    "upload": {
+      "target": "temporary-public-storage"
+    }
+  }
+}
