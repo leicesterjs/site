@@ -20,7 +20,11 @@ layout: layout.njk
 
 <h2>Where</h2>
 
+{% if location %}
 <a href="https://www.google.com/maps/search/?api=1&query={{ location | urlencode }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>
+{% else %}
+TBC
+{% endif %}
 
 {% isFuture started_at %}
   <h2>RSVP</h2>
