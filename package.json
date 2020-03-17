@@ -11,12 +11,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0",
+    "@11ty/eleventy": "^0.10.0",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.0",
-    "clean-css": "^4.2.1",
+    "clean-css": "^4.2.3",
     "flat-cache": "^2.0.1",
     "html-minifier": "^4.0.0",
-    "moment-timezone": "^0.5.27",
+    "moment-timezone": "^0.5.28",
     "node-fetch": "^2.6.0"
   }
 }
