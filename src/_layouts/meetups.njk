@@ -4,6 +4,8 @@ layout: layout.njk
 
 <h1>{{ title }}</h1>
 
+{{ content | safe }}
+
 {%- if talks.length %}
 <h2>Talks</h2>
 
