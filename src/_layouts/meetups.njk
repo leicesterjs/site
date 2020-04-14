@@ -22,10 +22,10 @@ layout: layout.njk
 
 <h2>Where</h2>
 
-{% if location %}
+{% if location === 'TBC' or location === 'Remote' %}
+{{ location }}
+{% elseif location %}
 <a href="https://www.google.com/maps/search/?api=1&query={{ location | urlencode }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>
-{% else %}
-TBC
 {% endif %}
 
 {% isFuture started_at %}
