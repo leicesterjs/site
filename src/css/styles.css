@@ -28,6 +28,8 @@ a:hover {
 
 img {
   display: block;
+  height: auto;
+  max-width: 100%;
 }
 
 h1,
@@ -43,9 +45,27 @@ h2 {
 .logo {
   display: block;
   margin: 0 auto 2rem;
-  height: auto;
-  max-width: 100%;
   width: 80%;
+}
+
+.sponsors {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(calc(200px - 0.5rem), 1fr));
+}
+
+.card-header {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.card-header-empty {
+  padding-top: 100%;
+}
+
+.card h2 {
+  margin: 0.5rem 0 0;
 }
 
 .contributors {
