@@ -48,24 +48,18 @@ h2 {
   width: 80%;
 }
 
-.sponsors {
-  display: grid;
-  gap: 0.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(calc(200px - 0.5rem), 1fr));
-}
-
 .card {
   display: flex;
   flex-direction: column;
 }
 
 .card-header {
-  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
   overflow: hidden;
 }
 
 .card-header-empty {
+  background-color: rgba(0, 0, 0, 0.1);
   padding-top: 100%;
 }
 
@@ -89,15 +83,24 @@ h2 {
   transform: scale(1.1);
 }
 
-@media (max-width: 320px) {
+@media (min-width: 481px) {
+  .sponsors {
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(calc(200px - 0.5rem), 1fr));
+  }
+}
+
+@media (max-width: 480px) {
   .card {
     flex-direction: row;
+    margin-bottom: 0.5rem;
   }
   .card-header {
+    height: 100px;
     width: 100px;
   }
   .card-header-empty {
-    height: 100px;
     padding: 0;
   }
   .card-body {
