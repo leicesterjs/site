@@ -54,6 +54,11 @@ h2 {
   grid-template-columns: repeat(auto-fill, minmax(calc(200px - 0.5rem), 1fr));
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
 .card-header {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.25rem;
@@ -64,7 +69,7 @@ h2 {
   padding-top: 100%;
 }
 
-.card h2 {
+.card-body h2 {
   margin: 0.5rem 0 0;
 }
 
@@ -82,4 +87,23 @@ h2 {
 
 .thumbnail:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 320px) {
+  .card {
+    flex-direction: row;
+  }
+  .card-header {
+    width: 100px;
+  }
+  .card-header-empty {
+    height: 100px;
+    padding: 0;
+  }
+  .card-body {
+    padding: 0 0.5rem;
+  }
+  .card-body h2 {
+    margin-top: 0;
+  }
 }
