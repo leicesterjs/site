@@ -8,6 +8,7 @@
 }
 
 html {
+  font-size: 18px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
@@ -23,20 +24,20 @@ body {
 
 a {
   color: var(--brand-grey);
-  display: inline-flex;
 }
 
 a:visited {
   color: var(--brand-grey);
 }
 
-a:hover {
-  color: var(--brand-orange);
-}
-
 a:focus {
+  display: inline-flex;
   outline: 4px solid var(--brand-orange);
   outline-offset: 4px;
+}
+
+a:hover {
+  color: var(--brand-orange);
 }
 
 a img {
@@ -50,6 +51,10 @@ img {
   max-width: 100%;
 }
 
+nav {
+  margin: 2rem 0;
+}
+
 h1,
 h2 {
   color: var(--brand-orange);
@@ -57,18 +62,26 @@ h2 {
 
 blockquote {
   border-left: 4px solid var(--brand-orange);
-  margin: 0.5rem 0.75rem;
+  margin: 1.5rem 0.75rem;
   padding: 0.5rem 0.75rem;
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+p {
+  margin: 2rem 0;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 660px;
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   width: 80%;
 }
 
@@ -91,6 +104,10 @@ blockquote {
   margin: 0.5rem 0 0;
 }
 
+.card-body p {
+  margin-top: 0;
+}
+
 .contributors {
   display: grid;
   gap: 0.5rem;
@@ -98,13 +115,17 @@ blockquote {
 }
 
 .thumbnail {
-  border-radius: 0.25rem;
   transition: transform 0.1s ease-in-out;
-  width: 100%;
 }
 
+.thumbnail:focus,
 .thumbnail:hover {
   transform: scale(1.1);
+}
+
+.thumbnail img {
+  border-radius: 0.25rem;
+  width: 100%;
 }
 
 @media (min-width: 481px) {
