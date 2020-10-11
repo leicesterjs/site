@@ -27,11 +27,16 @@ title: LeicesterJS
     </style>
 
   <body>
+    <div id="skiplink-container">
+      <div>
+        <a class="skiplink" href="#maincontent">Skip to main content</a>
+      </div>
+    </div>
+
     <div class="container">
       {% include "logo.njk" %}
 
       {% include "navigation.njk" %}
 
-      {{ content | safe }}
+      <main id="maincontent">{{ content | safe }}</main>
     </div>
-

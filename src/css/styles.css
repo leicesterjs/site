@@ -21,13 +21,27 @@ body {
   padding: 0.5rem;
 }
 
-a,
+a {
+  color: var(--brand-grey);
+  display: inline-flex;
+}
+
 a:visited {
   color: var(--brand-grey);
 }
 
 a:hover {
   color: var(--brand-orange);
+}
+
+a:focus {
+  outline: 4px solid var(--brand-orange);
+  outline-offset: 4px;
+}
+
+a img {
+  outline: none;
+  padding: 0;
 }
 
 img {
@@ -119,4 +133,28 @@ blockquote {
   .card-body h2 {
     margin-top: 0;
   }
+}
+
+.skiplink {
+  position: absolute;
+  left: -9999em;
+}
+
+.skiplink:focus {
+  left: 0;
+  z-index: 1;
+}
+
+#skiplink-container {
+  text-align: center;
+}
+
+#skiplink-container div {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+#skiplink-container .skiplink {
+  margin-left: 0.75rem;
 }
