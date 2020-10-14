@@ -79,7 +79,8 @@ p {
   max-width: 660px;
 }
 
-.logo {
+.logo,
+.logo:focus {
   display: block;
   margin: 0 auto;
   width: 80%;
