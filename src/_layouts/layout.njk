@@ -1,21 +1,26 @@
 ---
 title: LeicesterJS
+description: LeicesterJS is a meetup all about JavaScript. Come and discuss all things JavaScript, Node and software development!
+theme_color: "#2e353f"
+twitter:
+  title: LeicesterJS is a meetup all about JavaScript.
+  description: Come and discuss all things JavaScript, Node and software development!
 ---
 <!doctype html>
 <html lang="en">
     <meta charset="UTF-8" />
     <title>{{ title }}</title>
-    <meta name="description" content="LeicesterJS is a meetup all about JavaScript. Come and discuss all things JavaScript, Node and software development!">
-    <meta property="og:title" content="LeicesterJS" />
+    <meta name="description" content="{{ description }}">
+    <meta property="og:title" content="{{ title }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://leicesterjs.org" />
     <meta property="og:image" content="https://leicesterjs.org/img/logo@2x.jpg" />
     <meta property="og:image:alt" content="A stylised orange fox and text that reads LeicsJS">
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@leicesterjs" />
-    <meta name="twitter:title" content="LeicesterJS is a meetup all about JavaScript." />
-    <meta name="twitter:description" content="Come and discuss all things JavaScript, Node and software development!" />
-    <meta name="theme-color" content="#2e353f" />
+    <meta name="twitter:title" content="{{ twitter.title }}" />
+    <meta name="twitter:description" content="{{ twitter.description }}" />
+    <meta name="theme-color" content="{{ theme_color }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     {% set css %}
@@ -27,11 +32,18 @@ title: LeicesterJS
     </style>
 
   <body>
+    <div id="skiplink-container">
+      <div>
+        <a class="skiplink" href="#maincontent">Skip to main content</a>
+      </div>
+    </div>
+
     <div class="container">
-      {% include "logo.njk" %}
+      <header>
+        {% include "logo.njk" %}
+      </header>
 
       {% include "navigation.njk" %}
 
-      {{ content | safe }}
+      <main id="maincontent">{{ content | safe }}</main>
     </div>
-

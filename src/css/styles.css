@@ -8,6 +8,7 @@
 }
 
 html {
+  font-size: 18px;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
 }
@@ -21,19 +22,37 @@ body {
   padding: 0.5rem;
 }
 
-a,
+a {
+  color: var(--brand-grey);
+}
+
 a:visited {
   color: var(--brand-grey);
+}
+
+a:focus {
+  display: inline-flex;
+  outline: 4px solid var(--brand-orange);
+  outline-offset: 4px;
 }
 
 a:hover {
   color: var(--brand-orange);
 }
 
+a img {
+  outline: none;
+  padding: 0;
+}
+
 img {
   display: block;
   height: auto;
   max-width: 100%;
+}
+
+nav {
+  margin: 2rem 0;
 }
 
 h1,
@@ -43,18 +62,27 @@ h2 {
 
 blockquote {
   border-left: 4px solid var(--brand-orange);
-  margin: 0.5rem 0.75rem;
+  margin: 1.5rem 0.75rem;
   padding: 0.5rem 0.75rem;
+}
+
+li {
+  margin: 0.25rem 0;
+}
+
+p {
+  margin: 2rem 0;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 660px;
 }
 
-.logo {
+.logo,
+.logo:focus {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   width: 80%;
 }
 
@@ -77,6 +105,10 @@ blockquote {
   margin: 0.5rem 0 0;
 }
 
+.card-body p {
+  margin-top: 0;
+}
+
 .contributors {
   display: grid;
   gap: 0.5rem;
@@ -84,13 +116,17 @@ blockquote {
 }
 
 .thumbnail {
-  border-radius: 0.25rem;
   transition: transform 0.1s ease-in-out;
-  width: 100%;
 }
 
+.thumbnail:focus,
 .thumbnail:hover {
   transform: scale(1.1);
+}
+
+.thumbnail img {
+  border-radius: 0.25rem;
+  width: 100%;
 }
 
 @media (min-width: 481px) {
@@ -119,4 +155,28 @@ blockquote {
   .card-body h2 {
     margin-top: 0;
   }
+}
+
+.skiplink {
+  position: absolute;
+  left: -9999em;
+}
+
+.skiplink:focus {
+  left: 0;
+  z-index: 1;
+}
+
+#skiplink-container {
+  text-align: center;
+}
+
+#skiplink-container div {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1020px;
+}
+
+#skiplink-container .skiplink {
+  margin-left: 0.75rem;
 }
