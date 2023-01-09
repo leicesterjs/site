@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-inclusive-language": "^1.0.2",
     "clean-css": "^5.1.2",
     "flat-cache": "^3.0.0",
